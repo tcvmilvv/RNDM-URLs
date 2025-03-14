@@ -71,13 +71,16 @@
             "https://chibird.com/post/730746559992659969/big-chibird-motivation-to-start-your-week-off"
         ];
 
-        window.onload = function() {
+        function redirect() {
             const randomIndex = Math.floor(Math.random() * links.length);
             window.location.href = links[randomIndex];
-        };
+        }
+
+        setTimeout(redirect, 1000);  // Wait 1 second before redirecting
     </script>
 </head>
 <body>
-    <p>Redirecting to a motivational post...</p>
+    <h2>Redirecting to a motivational post...</h2>
+    <p>If nothing happens, <a href="#" onclick="redirect()">click here</a>.</p>
 </body>
 </html>
